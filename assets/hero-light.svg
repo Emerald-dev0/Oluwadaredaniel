@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f4fbf7"/>
+      <stop offset="1" stop-color="#e2f5ec"/>
+    </linearGradient>
+    <linearGradient id="nameg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#059669"/>
+      <stop offset="1" stop-color="#0f766e"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#10b981"/>
+      <stop offset=".5" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#10b981"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#6ee7b7" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#6ee7b7" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#5eead4" stop-opacity=".4"/>
+      <stop offset="1" stop-color="#5eead4" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M34 0H0V34" fill="none" stroke="#d4ece0" stroke-width="1" opacity=".5"/>
+    </pattern>
+    <clipPath id="frame"><rect x="0" y="0" width="1200" height="360" rx="22"/></clipPath>
+  </defs>
+  <style>
+      @keyframes blink { 0%,45% { opacity:1 } 50%,95% { opacity:0 } 100% { opacity:1 } }
+      @keyframes breathe { 0%,100% { opacity:.35; transform:scale(1) } 50% { opacity:.7; transform:scale(1.08) } }
+      @keyframes fadein { from { opacity:0 } to { opacity:1 } }
+      @keyframes dash { to { stroke-dashoffset: -24 } }
+      .caret { animation: blink 1.05s step-end infinite }
+      .blob { animation: breathe 7s ease-in-out infinite; transform-origin: center; transform-box: fill-box }
+      .blob2 { animation: breathe 9s ease-in-out infinite reverse; transform-origin: center; transform-box: fill-box }
+      .l1 { animation: fadein .4s .3s both }
+      .l2 { animation: fadein .4s 1.0s both }
+      .l3 { animation: fadein .4s 1.7s both }
+      .l4 { animation: fadein .4s 2.4s both }
+      .flow { stroke-dasharray: 4 8; animation: dash 2.4s linear infinite }
+</style>
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="360" fill="url(#bg)"/>
+    <rect width="1200" height="360" fill="url(#grid)"/>
+    <circle class="blob" cx="1010" cy="70" r="260" fill="url(#glow1)"/>
+    <circle class="blob2" cx="150" cy="330" r="240" fill="url(#glow2)"/>
+    <path d="M0 318 H1200" stroke="url(#edge)" stroke-width="2" opacity=".35" class="flow" fill="none"/>
+    <rect y="0" width="1200" height="4" fill="url(#edge)" opacity=".9"/>
+
+    <!-- decorative glyph -->
+    <text x="1152" y="104" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="72" font-weight="700" text-anchor="end" fill="#dff2e8" opacity=".9">&lt;/&gt;</text>
+
+    <!-- terminal card -->
+    <g>
+      <rect x="52" y="66" width="560" height="228" rx="14" fill="#ffffff" stroke="#c9e9da" stroke-width="1.5"/>
+      <rect x="52" y="66" width="560" height="34" rx="14" fill="#c9e9da" opacity=".55"/>
+      <rect x="52" y="86" width="560" height="14" fill="#c9e9da" opacity=".55"/>
+      <circle cx="76" cy="83" r="6" fill="#f87171"/>
+      <circle cx="96" cy="83" r="6" fill="#fbbf24"/>
+      <circle cx="116" cy="83" r="6" fill="#34d399"/>
+      <text x="332" y="88" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="13" text-anchor="middle" fill="#4d7562">emerald@dev0: ~/oluwdare</text>
+
+      <g class="l1">
+        <text x="76" y="134" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="16" fill="#059669">❯</text>
+        <text x="96" y="134" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="16" fill="#08281b">whoami</text>
+      </g>
+      <g class="l2">
+        <text x="96" y="164" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="16" fill="#4d7562">oluwdare daniel — frontend engineer</text>
+        <text x="76" y="194" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="16" fill="#059669">❯</text>
+        <text x="96" y="194" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="16" fill="#08281b">stack --list</text>
+      </g>
+      <g class="l3">
+        <text x="96" y="224" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="16" fill="#4d7562">typescript · react · next.js · node</text>
+      </g>
+      <g class="l4">
+        <text x="76" y="254" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="16" fill="#059669">❯</text>
+        <text x="96" y="254" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="16" fill="#08281b">status</text>
+        <text x="164" y="254" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="16" fill="#059669">shipping ✦</text>
+        <rect class="caret" x="268" y="240" width="10" height="18" fill="#059669"/>
+      </g>
+    </g>
+
+    <!-- name block -->
+    <text x="664" y="148" font-size="62" font-weight="800" letter-spacing="1" fill="url(#nameg)">OLUWADARE</text>
+    <text x="664" y="212" font-size="62" font-weight="800" letter-spacing="1" fill="none" stroke="url(#nameg)" stroke-width="1.6">DANIEL</text>
+    <rect x="668" y="234" width="120" height="4" rx="2" fill="url(#edge)"/>
+    <text x="668" y="270" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="17" letter-spacing="3" fill="#4d7562">FRONTEND ENGINEER · UI CRAFTSMAN</text>
+
+    <!-- chips -->
+    <g font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="14" fill="#065f46">
+      <rect x="668" y="292" width="128" height="30" rx="15" fill="#e6f7ef" stroke="#b7e4cd"/>
+      <text x="732" y="312" text-anchor="middle">69+ repos</text>
+      <rect x="808" y="292" width="150" height="30" rx="15" fill="#e6f7ef" stroke="#b7e4cd"/>
+      <text x="883" y="312" text-anchor="middle">react · next.js</text>
+      <rect x="970" y="292" width="176" height="30" rx="15" fill="#e6f7ef" stroke="#b7e4cd"/>
+      <text x="1058" y="312" text-anchor="middle">open to collab ✦</text>
+    </g>
+  </g>
+  <rect x="1" y="1" width="1198" height="358" rx="22" fill="none" stroke="#059669" stroke-opacity=".28" stroke-width="2"/>
+</svg>
